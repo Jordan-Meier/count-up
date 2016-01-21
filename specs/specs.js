@@ -10,5 +10,8 @@ describe('countBy4', function () {
   it("it will count to a given number by a given increment", function() {
     expect(countBy4(0,16,4)).to.eql([0, 4, 8, 12, 16]);
   });
+  it("it will return false if values entered are not numbers", function () {
+    expect(countBy4("word")).to.equal(false);
+  });
 
 });

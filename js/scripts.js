@@ -7,15 +7,22 @@ var countBy1 = function(number, increment) {
 
 var countBy4 = function(startNumber, endNumber, increment) {
   var result = [];
+  if ((isNaN(startNumber)) || (isNaN(endNumber)) || (isNaN(increment))) {
+    return false;
+  }
   for (startNumber; startNumber <= endNumber; startNumber += increment) {
     result.push(startNumber);
   }
   return result;
 }
 
-$(document).ready(function() {
-  $()
 
 
 
-});
+//
+// $(document).ready(function() {
+//   $()
+//
+//
+//
+// });
