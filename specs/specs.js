@@ -1,11 +1,5 @@
 describe('countTo', function() {
-  it("it will count to the given number by given increments", function() {
-    expect(countTo(30,5)).to.eql([5, 10, 15, 20, 25, 30, 35]);
+  it("it will count to a given number by increments of 1", function() {
+    expect(countTo(10,1)).to.eql([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
-
 });
-// describe('countBy', function () {
-//   it("it will count to the given number in given increments", function () {
-//     expect(countBy(5)).to.equal(true);
-//   })
-// });
