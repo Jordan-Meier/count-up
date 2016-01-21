@@ -5,24 +5,36 @@ var countBy1 = function(number, increment) {
 }
 
 
-var countBy4 = function(startNumber, endNumber, increment) {
+var countBy4 = function(endNumber, increment) {
   var result = [];
-  if ((isNaN(startNumber)) || (isNaN(endNumber)) || (isNaN(increment))) {
-    return false;
+
+  for (var i = increment; i <= endNumber; i += increment) {
+    result.push(i);
   }
-  for (startNumber; startNumber <= endNumber; startNumber += increment) {
-    result.push(startNumber);
+  if ((isNaN(endNumber)) || (isNaN(increment))) {
+    alert("Please fill all fields with a numeric value");
+  } else {
   }
+
   return result;
 }
 
 
 
 
-//
-// $(document).ready(function() {
-//   $()
-//
-//
-//
-// });
+
+$(document).ready(function() {
+  $("form#countUp").submit(function(event) {
+    var endNumber = parseFloat($("input#endNum").val());
+    var increment = parseFloat($("input#countBy").val());
+    var results = countBy4(endNumber, increment);
+
+
+
+
+    $("#result").text(results);
+
+  event.preventDefault();
+  });
+
+});
