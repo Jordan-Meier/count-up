@@ -1,17 +1,21 @@
-var countTo = function(number, increment) {
-  for (var i = 1; i <=10; i += 1) {
+var countBy1 = function(number, increment) {
+  for (var i = 1; i <=number; i += increment) {
     return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   }
-
 }
 
-// var countBy = function (increment) {
-//   for (var i = 1; i <= 30; i+= increment) {
-//     return true;
-//   }
-// }
+
+var countBy4 = function(startNumber, endNumber, increment) {
+  var result = [];
+  for (startNumber; startNumber <= endNumber; startNumber += increment) {
+    result.push(startNumber);
+  }
+  return result;
+}
+
+$(document).ready(function() {
+  $()
 
 
-// for (var i = 0; i <= number; i+= increment) {
-//   return [5, 10, 15, 20, 25, 30, 35];
-// }
+
+});
